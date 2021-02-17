@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  get 'help', to: 'welcome#help'
+  get 'ayuda', to: 'welcome#help'
+  get 'nosotros', to: 'welcome#about'
 end
