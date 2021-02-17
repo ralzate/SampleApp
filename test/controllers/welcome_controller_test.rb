@@ -1,8 +1,10 @@
 require "test_helper"
 
 class WelcomeControllerTest < ActionDispatch::IntegrationTest
-  def setup
-    @base_title = "Ruby on Rails Tutorial Sample App"
+
+  test "should get root" do
+    get FILL_IN
+    assert_response FILL_IN
   end
 
   # Index method test
@@ -25,4 +27,11 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "About | #{@base_title}"
   end
+
+  # About method contact
+    test "should get contact" do
+      get welcome_contact_url
+      assert_response :success
+      assert_select "title", "About | #{@base_title}"
+    end
 end
