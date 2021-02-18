@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  get 'ayuda', to: 'welcome#help'
-  get 'nosotros', to: 'welcome#about'
-  get 'contactanos', to: 'welcome#contact'
+  get 'help', to: 'welcome#help'
+  get 'about', to: 'welcome#about'
+  get 'contact', to: 'welcome#contact'
+  get 'sign_up', to: 'users#new'
 end

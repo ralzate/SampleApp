@@ -1,34 +1,27 @@
-require "test_helper"
+require 'test_helper'
+  class WelcomeControllerTest < ActionDispatch::IntegrationTest
 
-class WelcomeControllerTest < ActionDispatch::IntegrationTest
-
-
-
-  # Index method test
-  test "should get index" do
-    get welcome_index_url
+  test "should get home" do
+    get root_path
     assert_response :success
     assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
-  
-  # Help method test
+
   test "should get help" do
-    get welcome_help_url
+    get help_path
     assert_response :success
-    assert_select "title", "Help | #{@base_title}"
+    assert_select "title", "Help | Ruby on Rails Tutorial Sample App"
   end
 
-  # About method test
   test "should get about" do
-    get welcome_about_url
+    get about_path
     assert_response :success
-    assert_select "title", "About | #{@base_title}"
+    assert_select "title", "About | Ruby on Rails Tutorial Sample App"
   end
 
-  # About method contact
-    test "should get contact" do
-      get welcome_contact_url
-      assert_response :success
-      assert_select "title", "About | #{@base_title}"
-    end
+  test "should get contact" do
+    get contact_path
+    assert_response :success
+    assert_select "title", "Contact | Ruby on Rails Tutorial Sample App"
+  end
 end
