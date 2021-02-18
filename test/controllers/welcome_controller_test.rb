@@ -2,16 +2,13 @@ require "test_helper"
 
 class WelcomeControllerTest < ActionDispatch::IntegrationTest
 
-  test "should get root" do
-    get FILL_IN
-    assert_response FILL_IN
-  end
+
 
   # Index method test
   test "should get index" do
     get welcome_index_url
     assert_response :success
-    assert_select "title", "Home | #{@base_title}"
+    assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
   
   # Help method test

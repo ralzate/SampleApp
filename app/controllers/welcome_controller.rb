@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   # Controller without rest
   def index
+
   end
 
   def help
@@ -12,3 +13,4 @@ class WelcomeController < ApplicationController
   def contact
   end
 end
+
