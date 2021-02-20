@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get 'contact', to: 'welcome#contact'
   get 'signup', to: 'users#new'
   post '/signup',  to: 'users#create'
-
+  resources :account_activations, only: [:edit]
 
 end
